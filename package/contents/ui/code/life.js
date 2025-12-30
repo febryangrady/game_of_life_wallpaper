@@ -1,4 +1,4 @@
-const SIZE = 10;
+let SIZE;
 
 let w, h, pw;
 let cells, next;
@@ -11,7 +11,9 @@ function fillRandom() {
     }
 }
 
-function dimensionChanged(width, height) {
+function dimensionChanged(width, height, cellSize) {
+    SIZE = cellSize;
+
     w = (width / SIZE) | 0;
     h = (height / SIZE) | 0;
     pw = w + 2;
